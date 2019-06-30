@@ -284,7 +284,7 @@ def get_room_parameters(request, room_id, client_id, is_initiator):
     'pc_constraints': json.dumps(pc_constraints),
     'offer_options': json.dumps(offer_options),
     'media_constraints': json.dumps(media_constraints),
-    'ice_server_url': ice_server_url,
+    'ice_server_url': 'https://' + request.host + ':3034/iceconfig?key=none',
     'ice_server_transports': ice_server_transports,
     'include_loopback_js' : include_loopback_js,
     'wss_url': wss_url,
